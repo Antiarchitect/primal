@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `BitVec` struct in crate `primal_bit`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, BitVec">
+
+    <title>primal_bit::BitVec - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>primal_bit</a></p><script>window.sidebarCurrent = {name: 'BitVec', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>primal_bit</a>::<wbr><a class='struct' href=''>BitVec</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]</a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-21' href='../src/primal_bit/lib.rs.html#27-32'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct BitVec {
+    // some fields omitted
+}</pre><div class='docblock'><p>The bitvector type.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h4>
+<div class='docblock'><p>Creates an empty <code>BitVec</code>.</p>
+
+<h1 id="examples" class='section-header'><a
+                           href="#examples">Examples</a></h1><pre id='rust-example-rendered' class='rust '>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>collections</span>::<span class='ident'>BitVec</span>;
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>bv</span> <span class='op'>=</span> <span class='ident'>BitVec</span>::<span class='ident'>new</span>();
+</pre>
+</div><h4 id='method.from_u64s' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_u64s' class='fnname'>from_u64s</a>(data: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>&gt;, bits: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h4>
+<h4 id='method.as_bytes_mut' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_bytes_mut' class='fnname'>as_bytes_mut</a>(&amp;mut self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;mut [</a><a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a></code></h4>
+<h4 id='method.as_bytes' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_bytes' class='fnname'>as_bytes</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a></code></h4>
+<h4 id='method.as_u64s' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_u64s' class='fnname'>as_u64s</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a></code></h4>
+<h4 id='method.count_ones_before' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.count_ones_before' class='fnname'>count_ones_before</a>(&amp;self, bit: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></h4>
+<div class='docblock'><p>Count the number of ones for the bits up to but not including
+the <code>bit</code>th bit.</p>
+</div><h4 id='method.find_nth_bit' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.find_nth_bit' class='fnname'>find_nth_bit</a>(&amp;self, n: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;</code></h4>
+<div class='docblock'><p>Find the index of the <code>n</code>th (0-indexed) set bit.</p>
+</div><h4 id='method.from_elem' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_elem' class='fnname'>from_elem</a>(nbits: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, bit: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h4>
+<div class='docblock'><p>Creates a <code>BitVec</code> that holds <code>nbits</code> elements, setting each element
+to <code>bit</code>.</p>
+
+<h1 id="examples" class='section-header'><a
+                           href="#examples">Examples</a></h1><pre id='rust-example-rendered' class='rust '>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>collections</span>::<span class='ident'>BitVec</span>;
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>bv</span> <span class='op'>=</span> <span class='ident'>BitVec</span>::<span class='ident'>from_elem</span>(<span class='number'>10</span>, <span class='boolval'>false</span>);
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>bv</span>.<span class='ident'>len</span>(), <span class='number'>10</span>);
+<span class='kw'>for</span> <span class='ident'>x</span> <span class='kw'>in</span> <span class='ident'>bv</span>.<span class='ident'>iter</span>() {
+    <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>x</span>, <span class='boolval'>false</span>);
+}
+</pre>
+</div><h4 id='method.get' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get' class='fnname'>get</a>(&amp;self, i: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<div class='docblock'><p>Retrieves the value at index <code>i</code>, or <code>None</code> if the index is out of bounds.</p>
+
+<h1 id="examples" class='section-header'><a
+                           href="#examples">Examples</a></h1><pre id='rust-example-rendered' class='rust '>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>collections</span>::<span class='ident'>BitVec</span>;
+
+<span class='kw'>let</span> <span class='ident'>bv</span> <span class='op'>=</span> <span class='ident'>BitVec</span>::<span class='ident'>from_bytes</span>(<span class='kw-2'>&amp;</span>[<span class='number'>0b01100000</span>]);
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>bv</span>.<span class='ident'>get</span>(<span class='number'>0</span>), <span class='prelude-val'>Some</span>(<span class='boolval'>false</span>));
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>bv</span>.<span class='ident'>get</span>(<span class='number'>1</span>), <span class='prelude-val'>Some</span>(<span class='boolval'>true</span>));
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>bv</span>.<span class='ident'>get</span>(<span class='number'>100</span>), <span class='prelude-val'>None</span>);
+
+<span class='comment'>// Can also use array indexing</span>
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>bv</span>[<span class='number'>1</span>], <span class='boolval'>true</span>);
+</pre>
+</div><h4 id='method.set' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set' class='fnname'>set</a>(&amp;mut self, i: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></h4>
+<div class='docblock'><p>Sets the value of a bit at an index <code>i</code>.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if <code>i</code> is out of bounds.</p>
+
+<h1 id="examples" class='section-header'><a
+                           href="#examples">Examples</a></h1><pre id='rust-example-rendered' class='rust '>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>collections</span>::<span class='ident'>BitVec</span>;
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>bv</span> <span class='op'>=</span> <span class='ident'>BitVec</span>::<span class='ident'>from_elem</span>(<span class='number'>5</span>, <span class='boolval'>false</span>);
+<span class='ident'>bv</span>.<span class='ident'>set</span>(<span class='number'>3</span>, <span class='boolval'>true</span>);
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>bv</span>[<span class='number'>3</span>], <span class='boolval'>true</span>);
+</pre>
+</div><h4 id='method.set_unchecked' class='method'><a class='stability Unmarked' title='No stability level'></a><code>unsafe fn <a href='#method.set_unchecked' class='fnname'>set_unchecked</a>(&amp;mut self, i: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></h4>
+<h4 id='method.set_all' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_all' class='fnname'>set_all</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Sets all bits to 1.</p>
+
+<h1 id="examples" class='section-header'><a
+                           href="#examples">Examples</a></h1><pre id='rust-example-rendered' class='rust '>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>collections</span>::<span class='ident'>BitVec</span>;
+
+<span class='kw'>let</span> <span class='ident'>before</span> <span class='op'>=</span> <span class='number'>0b01100000</span>;
+<span class='kw'>let</span> <span class='ident'>after</span>  <span class='op'>=</span> <span class='number'>0b11111111</span>;
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>bv</span> <span class='op'>=</span> <span class='ident'>BitVec</span>::<span class='ident'>from_bytes</span>(<span class='kw-2'>&amp;</span>[<span class='ident'>before</span>]);
+<span class='ident'>bv</span>.<span class='ident'>set_all</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>bv</span>, <span class='ident'>BitVec</span>::<span class='ident'>from_bytes</span>(<span class='kw-2'>&amp;</span>[<span class='ident'>after</span>]));
+</pre>
+</div><h4 id='method.iter' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.iter' class='fnname'>iter</a>(&amp;self) -&gt; <a class='struct' href='../primal_bit/struct.Iter.html' title='primal_bit::Iter'>Iter</a></code></h4>
+<div class='docblock'><p>Returns an iterator over the elements of the vector in order.</p>
+
+<h1 id="examples" class='section-header'><a
+                           href="#examples">Examples</a></h1><pre id='rust-example-rendered' class='rust '>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>collections</span>::<span class='ident'>BitVec</span>;
+
+<span class='kw'>let</span> <span class='ident'>bv</span> <span class='op'>=</span> <span class='ident'>BitVec</span>::<span class='ident'>from_bytes</span>(<span class='kw-2'>&amp;</span>[<span class='number'>0b01110100</span>, <span class='number'>0b10010010</span>]);
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>bv</span>.<span class='ident'>iter</span>().<span class='ident'>filter</span>(<span class='op'>|</span><span class='ident'>x</span><span class='op'>|</span> <span class='op'>*</span><span class='ident'>x</span>).<span class='ident'>count</span>(), <span class='number'>7</span>);
+</pre>
+</div><h4 id='method.len' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.len' class='fnname'>len</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></h4>
+<div class='docblock'><p>Returns the total number of bits in this vector</p>
+</div><h4 id='method.is_empty' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.is_empty' class='fnname'>is_empty</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns true if there are no bits in this vector</p>
+</div><h4 id='method.clear' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.clear' class='fnname'>clear</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Clears all bits in this vector.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Index.html' title='core::ops::Index'>Index</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt; for <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h3><div class='impl-items'><h4 id='assoc_type.Output' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Output = <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.index' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/ops/trait.Index.html#method.index' class='fnname'>index</a>(&amp;self, i: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; &amp;<a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/default/trait.Default.html#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h4>
+<h4 id='method.clone_from' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;<a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a>)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, fmt: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h3><div class='impl-items'><h4 id='method.hash' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash' class='fnname'>hash</a>&lt;H: <a class='trait' href='http://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, state: &amp;mut H)</code></h4>
+<h4 id='method.hash_slice' class='method'><a class='stability Unstable' title='Unstable: module was recently redesigned'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where'>where H: <a class='trait' href='http://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.eq' class='fnname'>eq</a>(&amp;self, other: &amp;<a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h3><div class='impl-items'></div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;'a&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/iter/trait.IntoIterator.html' title='core::iter::IntoIterator'>IntoIterator</a> for &amp;'a <a class='struct' href='../primal_bit/struct.BitVec.html' title='primal_bit::BitVec'>BitVec</a></code></h3><div class='impl-items'><h4 id='assoc_type.Item' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Item = <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='assoc_type.IntoIter' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type IntoIter = <a class='struct' href='../primal_bit/struct.Iter.html' title='primal_bit::Iter'>Iter</a>&lt;'a&gt;</code></h4>
+<h4 id='method.into_iter' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/iter/trait.IntoIterator.html#method.into_iter' class='fnname'>into_iter</a>(self) -&gt; <a class='struct' href='../primal_bit/struct.Iter.html' title='primal_bit::Iter'>Iter</a>&lt;'a&gt;</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "primal_bit";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>
